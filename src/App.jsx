@@ -6,27 +6,25 @@ const router = createBrowserRouter([
   {
     path:'/',
     element: <HomeLayout/>,
+    children:[
+      {
+        index:true,
+        element: <Landing/>,
+      },
+      {
+        path:'cocktail',
+        element: <Cocktail/>,
+      },
+      {
+        path:'newsletter',
+        element: <Newsletter/>,
+      },
+      {
+        path:'about',
+        element: <About/>,
+      }
+    ]
   },
-  {
-    path:'/about',
-    element: <About/>,
-  },
-  {
-    path:'/cocktail',
-    element: <Cocktail/>,
-  },
-  {
-    path:'/newsletter',
-    element: <Newsletter/>,
-  },
-  {
-    path:'/error',
-    element: <Error/>,
-  },
-  {
-    path:'/about',
-    element: <About/>,
-  }
 ])
 
 const App = () => {
